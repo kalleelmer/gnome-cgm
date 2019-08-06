@@ -81,7 +81,7 @@ const BGIndicator = new Lang.Class({
 		if(this.bg == null) {
 			this.buttonText.set_text("--");
 		} else {
-			this.buttonText.set_text(this.bg.value.toString() + " | " + this._ageString());
+			this.buttonText.set_text(this._valueString() + " | " + this._ageString());
 		}
 	},
 
@@ -90,6 +90,14 @@ const BGIndicator = new Lang.Class({
 			return -1;
 		}
 		return (new Date() - this.bg.date) / 1000;
+	},
+
+	_valueString : function() {
+		if(this.bg == null) {
+			return "---";
+		}
+		let value = this.bg.value;
+		return Math.round(value) + "." + (Math.round(value * 10) % 10);
 	},
 
 	_ageString : function() {
