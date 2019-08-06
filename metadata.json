@@ -1,0 +1,8 @@
+{
+	"name": "BGIndicator",
+	"description": "Indicator for continuous glucose monitors using Nightscout.",
+	"uuid": "bgindicator@silvertejp.nu",
+	"shell-version": [
+		"3.28.4"
+	]
+}
