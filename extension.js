@@ -97,7 +97,7 @@ const BGIndicator = new Lang.Class({
 			return "---";
 		}
 		let value = this.bg.value;
-		return Math.round(value) + "." + (Math.round(value * 10) % 10);
+		return value.toFixed(1);
 	},
 
 	_ageString : function() {
